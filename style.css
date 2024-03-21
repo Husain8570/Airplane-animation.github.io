@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    background-color: skyblue;
+
+  
+}
+
+header{
+    display: flex;
+    border-bottom: 2px solid white;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav ul li{
+    margin-left: -54px;
+}
+.nav ul{
+    display: flex;
+    list-style: none;
+    width: 20vw;
+    justify-content: space-between;
+}
+.nav{
+    width: 20vw;
+    /* margin-left: 40vw; */
+}
+.nav ul li a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+.nav ul li a::before{
+    content: "";
+    height: 1vh;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: -1;
+    bottom: -4vh;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+.nav ul li a:hover::before{
+    opacity: 1;
+}
+.social{
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social ul{
+    width: 13vw;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.menu img{
+    height: 2vh;
+}
+.logo img{
+    height: 5vh;
+}
+.search{
+/* width: 20vw; */
+height: 4vh;
+display: flex;
+justify-content: center;
+}
+.search input{
+padding-left: 12px;
+width: 25vw;
+border-radius: 200px;
+background-color: transparent;
+border: 1px solid white;
+color: white;
+}
+.airplane{
+margin-top: 4vh;
+animation-name: airanimate;
+animation-duration: 2s;
+animation-delay: 1s;
+animation-iteration-count: 3;
+}
+.airplane img{
+animation-name: airanimate;
+animation-duration: 2s;
+animation-iteration-count: 3;
+animation-delay: 1s;
+
+}
+main{
+height: 65vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+main img{
+height: 40vh;
+animation-name: baloonanim;
+animation-duration: 1s;
+animation-delay: 2s;
+animation-direction: alternate;
+animation-iteration-count: 2;
+}
+@keyframes airanimate {
+from{
+    transform: translateX(0vw);
+}
+to{
+    transform: translateX(50vw);
+}
+}
+@keyframes baloonanim {
+from{
+    transform: translateY(0vh);
+}
+to{
+    transform: translateY(54vh);
+}
+}
+@keyframes animcloud {
+from{
+    transform: translateY(0);
+}
+to{
+    transform: translateY(-20vh);
+}
+}
+.cloud img{
+position: absolute;
+top: 0;
+z-index: -1;
+animation-name: animcloud;
+animation-duration: 2s;
+animation-delay: 2s;
+animation-direction: alternate;
+animation-iteration-count: 2;
+
+}
+.box{
+position: relative;
+}
